@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+      <head>
+      <title>proposal</title>
+      <style type="text/css">
+      @import url(' https: //fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+      
+      * {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      
+      img {
+      margin-top:20px;
+      margin-bottom:30px;
+      }
+      
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      background: #23242a;
+      }
+      
+      .box {
+      position: relative;
+      width: 380px;
+      height: 420px;
+      background: #1c1c1c;
+      border-radius:8px;
+      overflow: hidden;
+      }
+      
+      .box::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 420px;
+      transform-origin:bottom right;
+      background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      animation: animate 6s linear infinite;
+      }
+      
+      .box::after {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 380px;
+      height: 420px;
+      transform-origin:bottom right;
+      background:linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+      animation: animate 6s linear infinite;
+      animation-delay: -3s;
+      }
+      
+      @keyframes animate {
+      0% {
+      transform: rotate(0deg);
+      }
+      
+      100% {
+      transform: rotate(360deg);
+      }
+      }
+      
+      form {
+      position: absolute;
+      inset: 2px;
+      background: #28292d;
+      padding: 50px 40px;
+      border-radius: 8px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      }
+      
+      #no:active {
+      margin-left:120px;
+      margin-right:50px;
+      width:50px;
+      height:60px;
+      }
+      h2 {
+      color:black;
+      }
+      .button {
+      margin-left:130px;
+      }
+      .question {
+      text-align: center;
+      border: none;
+      outline: none;
+      padding: 11px 25px;
+      background: #45f3ff;
+      margin-top: 10px;
+      border-radius:6px;
+      }
+      
+     .yes-btn {
+     background: #45f3ff;
+     width:40px;
+     height:30px;
+     margin-left:-50px; 
+      }
+      
+      .no-btn {
+      background: #45f3ff;
+      width:40px;
+      height:30px;
+      margin-left:50px;
+      }
+      .copyright {
+      color:#45f3ff;
+      margin-top:30px;
+      font-size:12px;
+      text-align:center;
+      }
+      </style>
+      </head>
+      <body>
+      <div class="box">
+      <form autocomplete="off">
+      <h2 class="question">Do you love me?</h2>
+      <img width="300px" src="Web.jpg">
+      
+      <div class="button">
+      <button class="yes-btn" onclick="getLove()" type="button">Yes</button>
+      <button  id ="no" class="no-btn" type="button">No</button>
+      </div>
+      <p class="copyright">@John Romel Lucot</p>
+      </div>
+      <script>
+      alert("Hi crush")
+      alert("Meron akong tanong sayu")
+      
+     function getLove() {
+     alert("I love you too :)")
+      };
+      </script>
+      </form>
+      </body>
+</html>
